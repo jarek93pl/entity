@@ -1,0 +1,1 @@
+﻿[System.Environment]::SetEnvironmentVariable("EntityDataBase","C:\Users\jarek\source\repos\entity\DataModel\MyFile.db","User")
