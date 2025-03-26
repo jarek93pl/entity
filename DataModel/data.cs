@@ -17,7 +17,7 @@ namespace DataModel
             //using sql server
             //  optionsBuilder.UseSqlServer("Server=localhost;Database=EntityConsole;Integrated Security=SSPI;Trusted_Connection=true;TrustServerCertificate=True;");
             optionsBuilder.UseSqlite($"Data source={Environment.GetEnvironmentVariable("EntityDataBase",EnvironmentVariableTarget.User)}");
-           //optionsBuilder.LogTo(Console.WriteLine);
+         // optionsBuilder.LogTo(Console.WriteLine);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
