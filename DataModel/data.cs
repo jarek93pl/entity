@@ -12,12 +12,13 @@ namespace DataModel
     {
 
         public DbSet<Team> Teams { get; set; }
+        public DbSet<Player> Playeres { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //using sql server
             //  optionsBuilder.UseSqlServer("Server=localhost;Database=EntityConsole;Integrated Security=SSPI;Trusted_Connection=true;TrustServerCertificate=True;");
-            optionsBuilder.UseSqlite($"Data source={Environment.GetEnvironmentVariable("EntityDataBase",EnvironmentVariableTarget.User)}");
-         // optionsBuilder.LogTo(Console.WriteLine);
+            optionsBuilder.UseSqlite($"Data source={Environment.GetEnvironmentVariable("EntityDataBase", EnvironmentVariableTarget.User)}");
+            // optionsBuilder.LogTo(Console.WriteLine);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -36,6 +37,12 @@ namespace DataModel
     public class Team : DataAbstract
     {
         public int MyProperty { get; set; }
+        public string Name { get; set; }
+        public virtual ICollection<Player> Playeres { get; set; }
+    }
+    public class Player : DataAbstract
+    {
+        public virtual Team team { get; set; }
         public string Name { get; set; }
     }
 
