@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataModel\DataModel.csproj" />
+    <ProjectReference Include="..\FiszkiDataBase\FiszkiDataBase.csproj" />
   </ItemGroup>
 
 </Project>

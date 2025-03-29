@@ -10,11 +10,13 @@ namespace entity
 {
     public class Relation
     {
+        /*
         public static void Main(string[] args)
         {
             ShowTeamWithPerson();
             Console.ReadLine();
         }
+        */
         public static void InsertPersonFor1()
         {
             Console.WriteLine("podaj nazwe osoboy");
