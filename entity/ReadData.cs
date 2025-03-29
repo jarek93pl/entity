@@ -1,4 +1,5 @@
 ﻿using DataModel;
+using FiszkiDataBase;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,13 +16,19 @@ namespace entity
         {
             ReadData r = new ReadData();
             Console.WriteLine("program started");
-            r.StartWithQuereble(null);
-            r.StartWithQuereble("l");
-
+            ReadNames();
             Console.WriteLine("program sie skonczyl");
             Console.ReadLine();
         }
         */
+
+        public static void ReadNames()
+        {
+
+            Foryoutube2Context foryoutube = new Foryoutube2Context();
+            foryoutube.TeachSetsFiches.Select(X => X.Name).ForEachAsync(X => Console.WriteLine(X));
+            //SELECT [t].[Name] FROM[TeachSetsFiche] AS[t]
+        }
         //https://github.com/trevoirwilliams/EntityFrameworkCoreFullTour/tree/02aa80b3dd979525ebcbd5013248bdac7aeeafcc
         void StartWithQuereble(string s)
         {

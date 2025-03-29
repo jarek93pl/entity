@@ -13,7 +13,7 @@ namespace entity
 {
     public class RawSql
     {
-
+        /*
         public static void Main(string[] args)
         {
             RawSql r = new RawSql();
@@ -21,7 +21,7 @@ namespace entity
             r.UseSqlDataBase();
             Console.WriteLine("program sie skonczyl");
             Console.ReadLine();
-        }
+        }*/
 
         public void UseSql()
         {
