@@ -72,7 +72,7 @@
     <Build Include="dbo\Stored Procedures\SaveFiche.sql" />
     <Build Include="dbo\Stored Procedures\RemoveSetFiche.sql" />
     <Build Include="dbo\Stored Procedures\NextFicheToTeach.sql" />
-    <Build Include="dbo\Stored Procedures\MergeFicheResponses.sql" />
+    <None Include="dbo\Stored Procedures\MergeFicheResponses.sql" />
     <Build Include="dbo\Stored Procedures\GetExtension.sql" />
     <Build Include="dbo\Stored Procedures\DeleteTeachSet.sql" />
     <Build Include="dbo\Stored Procedures\DeleteResponse.sql" />
@@ -81,7 +81,7 @@
     <Build Include="dbo\Stored Procedures\AnySetsFicheExist.sql" />
     <Build Include="dbo\Stored Procedures\AddUser.sql" />
     <Build Include="dbo\Stored Procedures\AddTeachSetFiche.sql" />
-    <Build Include="dbo\Stored Procedures\AddTeachBags.sql" />
+    <None Include="dbo\Stored Procedures\AddTeachBags.sql" />
     <Build Include="dbo\Stored Procedures\AddSetFiche.sql" />
   </ItemGroup>
 </Project>
