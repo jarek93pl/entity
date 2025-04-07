@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EntityWithMvc.Models
 {
-    public class Ticket
+    public class Ticket :IValidatableObject
     {
         //public static readonly string namezz = "ddd";
         [StringLength(100)]
@@ -17,5 +17,13 @@ namespace EntityWithMvc.Models
         public string Emile { get; set; }
 
         public int Id { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            if (MyProperty?.Length > 200)
+            {
+                yield return new ValidationResult("blabla");
+            }
+        }
     }
 }

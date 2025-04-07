@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EntityWithMvc.Data;
 using EntityWithMvc.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EntityWithMvc.Controllers
 {
@@ -18,7 +19,7 @@ namespace EntityWithMvc.Controllers
         {
             _context = context;
         }
-
+        [AllowAnonymous]
         // GET: Tickets
         public async Task<IActionResult> Index()
         {
@@ -43,6 +44,7 @@ namespace EntityWithMvc.Controllers
             return View(ticket);
         }
 
+        [Authorize]
         // GET: Tickets/Create
         public IActionResult Create()
         {
