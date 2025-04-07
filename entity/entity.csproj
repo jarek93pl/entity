@@ -14,7 +14,7 @@
     <Company>Jarek</Company>
     <Product>entitiyprojectjarek</Product>
     <Version>1.0.0</Version>
-    <PublishAot>True</PublishAot>
+    <PublishAot>False</PublishAot>
   </PropertyGroup>
 
   <ItemGroup>
