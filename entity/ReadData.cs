@@ -11,16 +11,16 @@ namespace entity
 {
     public class ReadData
     {
-        /*
+        
         public static void Main(string[] args)
         {
             ReadData r = new ReadData();
             Console.WriteLine("program started");
-            ReadNames();
+            r.GetAllTeams();
             Console.WriteLine("program sie skonczyl");
             Console.ReadLine();
         }
-        */
+        
 
         public static void ReadNames()
         {
