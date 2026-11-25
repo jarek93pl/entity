@@ -1,0 +1,1 @@
+applicationintent=readonly" use replica database
