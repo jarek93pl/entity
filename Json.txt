@@ -1,0 +1,8 @@
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<Author>().OwnsOne(
+        author => author.Contact, ownedNavigationBuilder =>
+        {
+            ownedNavigationBuilder.OwnsOne(contactDetails => contactDetails.Address);
+        });
+}
